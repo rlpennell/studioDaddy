@@ -10,7 +10,7 @@ export default {
     {
       name: "subcategory",
       type: "reference",
-      to: [{ type: "subCategory" }],
+      to: [{ type: "subcategory" }],
       options: {
         filter: ({ parent }) => {
           return parent.main

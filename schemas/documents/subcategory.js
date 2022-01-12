@@ -1,6 +1,6 @@
 export default {
-  name: "subCategory",
-  title: "Sub Category",
+  name: "subcategory",
+  title: "Subcategory",
   type: "document",
   fields: [
     {
