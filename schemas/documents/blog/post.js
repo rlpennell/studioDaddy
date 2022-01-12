@@ -1,7 +1,22 @@
+import { MdPhotoFilter } from 'react-icons/md'
+
 export default {
   name: 'post',
   title: 'Post',
   type: 'document',
+  preview: {
+    select: {
+      title: 'title',
+      author: 'author.name',
+    },
+    prepare({ title, author }) {
+      return {
+        title,
+        author,
+        media: MdPhotoFilter
+      }
+    }
+  },
   fields: [
     {
       name: 'title',
@@ -47,19 +62,5 @@ export default {
       title: 'Body',
       type: 'blockContent'
     }
-  ],
-
-  preview: {
-    select: {
-      title: 'title',
-      author: 'author.name',
-      media: 'mainImage'
-    },
-    prepare(selection) {
-      const {author} = selection
-      return Object.assign({}, selection, {
-        subtitle: author && `by ${author}`
-      })
-    }
-  }
+  ]
 }
