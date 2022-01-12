@@ -3,12 +3,10 @@ import { Card, Stack, Select } from '@sanity/ui'
 import { FormField } from '@sanity/base/components'
 import PatchEvent, {set, unset} from '@sanity/form-builder/PatchEvent'
 import { useId } from "@reach/auto-id" 
-import sanityClient from "part:@sanity/base/client"
+import { studioClient } from '../../lib/studioClient'
 
 const ClientAsyncSelect = React.forwardRef((props, ref) => {
   const [listItems, setListItems] = useState([])
-
-  const client = sanityClient.withConfig({apiVersion: '2021-03-25'})
 
   const { 
     type,         // Schema information
@@ -37,11 +35,9 @@ const ClientAsyncSelect = React.forwardRef((props, ref) => {
 
   const inputId = useId()
 
-  console.log(props)
-
   useEffect(() => {
     const getSections = async () => {
-      const items = await client.fetch(`*[_id == $id][0].sections[].title`, {id: parent.page._ref})
+      const items = await studioClient.fetch(`*[_id == $id][0].sections[].title`, {id: parent.page._ref})
       console.log(items)
       setListItems(items)
     }
