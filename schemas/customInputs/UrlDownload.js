@@ -22,12 +22,15 @@ const UrlDownload = props => {
     }, [])
 
     return (
+      <>
+      <p>Download File</p>
       <a 
         href={`${link}`} 
         target="_blank"
       >
         {link}
       </a>
+      </>
     )
 }
 

@@ -1,3 +1,5 @@
+import React from 'react'
+
 export default {
   name: 'author',
   title: 'Author',
@@ -42,7 +44,12 @@ export default {
   preview: {
     select: {
       title: 'name',
-      media: 'image'
+    },
+    prepare({title}) {
+      return {
+        title: title,
+        media: () => <span>🙋‍♀️</span>
+      }
     }
   }
 }
