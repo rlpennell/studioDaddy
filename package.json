@@ -20,15 +20,11 @@
     "@sanity/default-layout": "^2.23.3",
     "@sanity/default-login": "^2.23.2",
     "@sanity/desk-tool": "^2.23.4",
-    "@sanity/production-preview": "^2.15.0",
     "@sanity/vision": "^2.23.3",
     "prop-types": "^15.7",
     "react": "^17.0",
     "react-dom": "^17.0",
     "react-icons": "^4.3.1",
-    "sanity-plugin-iframe-pane": "^1.0.15",
-    "sanity-plugin-seo-tools": "^2.2.0",
-    "sanity-plugin-table": "^2.3.0",
     "styled-components": "^5.2.0"
   }
 }

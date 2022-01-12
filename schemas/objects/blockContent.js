@@ -32,14 +32,6 @@ of: [
       decorators: [
         { title: "Strong", value: "strong" },
         { title: "Emphasis", value: "em" },
-        { 
-          title: 'Contact Form', 
-          value: 'form',
-          blockEditor: {
-            icon: FaEnvelope,
-            render: () => <span><FaEnvelope /> Contact Form <FaEnvelope /></span>
-          }
-        }
       ],
       // Annotations can be any object structure – e.g. a link or a footnote.
       annotations: [
@@ -65,13 +57,5 @@ of: [
     type: "image",
     options: { hotspot: true },
   },
-  {
-    name: 'table',
-    title: 'Table',
-    type: 'object',
-    fields: [
-      {name: 'table', type: 'table'}
-    ]
-  }
 ],
-};
+}
