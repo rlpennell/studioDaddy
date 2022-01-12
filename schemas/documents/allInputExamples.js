@@ -16,6 +16,10 @@ export default {
   type: 'document',
   fields: [
     {
+      name: 'title',
+      type: 'string'
+    },
+    {
       name: 'createdAt',
       title: 'Display the _createdAt field within the document',
       type: 'string',
