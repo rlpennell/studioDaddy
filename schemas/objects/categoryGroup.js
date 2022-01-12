@@ -13,17 +13,15 @@ export default {
       type: "reference",
       to: [{ type: "subcategory" }],
       options: {
-        filter: ({ parent }) => {
-          return parent.main
-            ? {
-                filter: "category._ref == $ref",
-                params: {
-                  ref: parent.main._ref,
-                },
-              }
-            : "";
+        filter: ({ parent }) => parent.main ? 
+          ({
+            filter: "category._ref == $ref",
+            params: {
+              ref: parent.main._ref,
+            },
+          })
+          : ''
         },
       },
-    },
   ],
 };
