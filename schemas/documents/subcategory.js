@@ -1,7 +1,19 @@
+import { MdOutlineImageSearch } from 'react-icons/md'
 export default {
   name: "subcategory",
   title: "Subcategory",
   type: "document",
+  preview: {
+    select: {
+      title: 'title',
+    },
+    prepare({title}) {
+      return {
+        title,
+        media: MdOutlineImageSearch
+      }
+    }
+  },
   fields: [
     {
       name: "title",

@@ -1,9 +1,20 @@
-import React from 'react'
+import { MdOutlinePortrait } from 'react-icons/md'
 
 export default {
   name: 'author',
   title: 'Author',
   type: 'document',
+  preview: {
+    select: {
+      name: 'name',
+    },
+    prepare({name}) {
+      return {
+        title: name,
+        media: MdOutlinePortrait
+      }
+    }
+  },
   fields: [
     {
       name: 'name',
@@ -40,16 +51,5 @@ export default {
         }
       ]
     }
-  ],
-  preview: {
-    select: {
-      title: 'name',
-    },
-    prepare({title}) {
-      return {
-        title: title,
-        media: () => <span>🙋‍♀️</span>
-      }
-    }
-  }
+  ]
 }

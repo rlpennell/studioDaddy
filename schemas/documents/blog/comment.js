@@ -1,7 +1,23 @@
+import { MdOutlineComment } from 'react-icons/md'
+
 export default {
   name: 'comment',
   type: 'document',
   title: 'Comment',
+  preview: {
+    select: {
+      name: 'name',
+      comment: 'comment',
+      post: 'post.title'
+    },
+    prepare({name, comment, post}) {
+      return {
+        title: `${name} on ${post}`,
+        subtitle: comment,
+        media: MdOutlineComment
+      }
+    }
+  },
   fields: [
     {
       name: 'name',
@@ -28,18 +44,5 @@ export default {
         {type: 'post'}
       ]
     }
-  ],
-  preview: {
-    select: {
-      name: 'name',
-      comment: 'comment',
-      post: 'post.title'
-    },
-    prepare({name, comment, post}) {
-      return {
-        title: `${name} on ${post}`,
-        subtitle: comment
-      }
-    }
-  }
+  ]
 }
