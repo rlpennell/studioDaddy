@@ -2,13 +2,7 @@ import ClientAsyncSelect from '../customInputs/ClientAsyncSelect'
 import UrlDownload from '../customInputs/UrlDownload'
 import AsyncSelect from '../customInputs/AsyncSelect'
 import CreatedAt from '../customInputs/CreatedAt'
-
-const catHandler = (json) => {
-  return json.data.map(({ breed }) => ({
-    title: breed,
-    value: breed.toLowerCase().split(' ').join('-')
-  }))
-}
+import { catHandler } from '../../lib/utils/catHandler'
 
 export default {
   name: 'allInputExamples',

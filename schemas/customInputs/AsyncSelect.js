@@ -7,8 +7,6 @@ import { useId } from "@reach/auto-id"
 const AsyncSelect = React.forwardRef((props, ref) => {
   const [listItems, setListItems] = useState([])
 
-  console.log(props.parent)
-
   const { 
     type,         // Schema information
     value,        // Current field value

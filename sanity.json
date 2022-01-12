@@ -28,6 +28,14 @@
     {
       "name": "part:@sanity/desk-tool/structure",
       "path": "./lib/desk/deskStructure.js"
-    }
+    },
+    {
+      "name": "part:@sanity/base/new-document-structure",
+      "path": "./lib/newDocumentStructure.js"
+    },
+    { 
+      "implements": "part:@sanity/base/document-actions/resolver", 
+      "path": "./lib/resolveDocumentActions.js" 
+    } 
   ]
 }

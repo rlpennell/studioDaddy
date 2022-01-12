@@ -38,7 +38,6 @@ const ClientAsyncSelect = React.forwardRef((props, ref) => {
   useEffect(() => {
     const getSections = async () => {
       const items = await studioClient.fetch(`*[_id == $id][0].sections[].title`, {id: parent.page._ref})
-      console.log(items)
       setListItems(items)
     }
 
