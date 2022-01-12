@@ -1,0 +1,37 @@
+{
+  "root": true,
+  "project": {
+    "name": "Asynchronous Cats"
+  },
+  "api": {
+    "projectId": "k8p6uw8a",
+    "dataset": "production"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool",
+    "@sanity/production-preview",
+    "iframe-pane",
+    "table",
+    "seo-tools"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "@sanity/vision"
+      ]
+    }
+  },
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema"
+    },
+    {
+      "name": "part:@sanity/desk-tool/structure",
+      "path": "./lib/deskStructure.js"
+    }
+  ]
+}
