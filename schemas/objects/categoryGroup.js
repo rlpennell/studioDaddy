@@ -1,5 +1,6 @@
 export default {
   name: "categoryGroup",
+  title: 'Category Group',
   type: "object",
   fields: [
     {

@@ -50,8 +50,6 @@ const AsyncSelect = React.forwardRef((props, ref) => {
     getItems()
   }, [])
 
-  console.log(parent)
-
 	return (
     <FormField
       description={type.description}  // Creates description from schema
