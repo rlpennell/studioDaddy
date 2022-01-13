@@ -21,6 +21,13 @@ import gallery from './objects/gallery'
 import grid from './objects/community/grid'
 import sandbox from './documents/sandbox'
 import freeform from './objects/community/freeform'
+import movie from './documents/movie'
+import person from './documents/person'
+import screening from './documents/screening'
+import plotSummary from './objects/plotSummary'
+import plotSummaries from './objects/plotSummaries'
+import castMember from './objects/castMember'
+import crewMember from './objects/crewMember'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -46,6 +53,13 @@ export default createSchema({
     gallery,
     grid,
     sandbox,
-    freeform
+    freeform,
+    movie,
+    person,
+    screening,
+    plotSummary,
+    plotSummaries,
+    castMember,
+    crewMember
   ]),
 })

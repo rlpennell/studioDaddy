@@ -10,6 +10,7 @@ import {
   MdOutlineFlaky, 
   MdGroupWork 
 } from 'react-icons/md'
+import movieStructure from './movieStructure'
 
 export default () =>
   S.list()
@@ -43,6 +44,7 @@ export default () =>
       S.divider(),
       blogStructure,
       portfolioStructure,
+      movieStructure,
       S.divider(),
       S.listItem()
         .title('All')
@@ -51,7 +53,8 @@ export default () =>
           S.list()
             .title('All')
             .items([
-              ...S.documentTypeListItems().filter(listItem => !singleEdits.includes(listItem.getId()))
+              ...S.documentTypeListItems()
+                .filter(listItem => !singleEdits.includes(listItem.getId()))
             ])
         ),
     ])
