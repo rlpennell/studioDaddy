@@ -16,6 +16,7 @@
   "dependencies": {
     "@reach/auto-id": "^0.16.0",
     "@sanity/base": "^2.23.3",
+    "@sanity/code-input": "^2.24.0",
     "@sanity/core": "^2.23.2",
     "@sanity/default-layout": "^2.23.3",
     "@sanity/default-login": "^2.23.2",

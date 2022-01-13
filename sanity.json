@@ -11,7 +11,8 @@
     "@sanity/base",
     "@sanity/default-layout",
     "@sanity/default-login",
-    "@sanity/desk-tool"
+    "@sanity/desk-tool",
+    "@sanity/code-input"
   ],
   "env": {
     "development": {
@@ -33,9 +34,9 @@
       "name": "part:@sanity/base/new-document-structure",
       "path": "./src/newDocumentStructure.js"
     },
-    { 
-      "implements": "part:@sanity/base/document-actions/resolver", 
-      "path": "./src/resolveDocumentActions.js" 
-    } 
+    {
+      "implements": "part:@sanity/base/document-actions/resolver",
+      "path": "./src/resolveDocumentActions.js"
+    }
   ]
 }
