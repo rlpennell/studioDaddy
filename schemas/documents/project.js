@@ -1,6 +1,9 @@
+import { MdBedroomBaby } from 'react-icons/md'
+
 export default {
   name: 'project',
   title: 'Project',
+  icon: MdBedroomBaby,
   type: 'document',
   preview: {
     select: {
@@ -49,7 +52,7 @@ export default {
       name: 'members',
       title: 'Members',
       type: 'array',
-      of: [{type: 'author'}]
+      of: [{type: 'person'}]
     },
     {
       name: 'started',

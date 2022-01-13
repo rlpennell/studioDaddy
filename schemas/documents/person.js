@@ -1,10 +1,13 @@
-import {UserIcon} from '@sanity/icons'
+import { MdOutlinePortrait } from 'react-icons/md'
 
 export default {
   name: 'person',
   title: 'Person',
+  icon: MdOutlinePortrait,
   type: 'document',
-  icon: UserIcon,
+  preview: {
+    select: {title: 'name', media: 'image'},
+  },
   fields: [
     {
       name: 'name',
@@ -18,19 +21,23 @@ export default {
       type: 'slug',
       options: {
         source: 'name',
-        maxLength: 100,
+        maxLength: 96,
       },
     },
     {
       name: 'image',
       title: 'Image',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
+      type: 'figure'
     },
+    {
+      name: 'bio',
+      title: 'Bio',
+      type: 'simpleBlockContent'
+    },
+    {
+      name: 'isAuthor',
+      title: 'Is an Author?',
+      type: 'boolean'
+    }
   ],
-  preview: {
-    select: {title: 'name', media: 'image'},
-  },
 }

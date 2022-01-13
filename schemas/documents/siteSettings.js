@@ -3,6 +3,7 @@ import { MdSettingsSuggest } from 'react-icons/md'
 export default {
   name: 'siteSettings',
   title: 'Site Settings',
+  icon: MdSettingsSuggest,
   type: 'document',
   preview: {
     select: {
@@ -11,7 +12,6 @@ export default {
     prepare({title}) {
       return {
         title: title ? title : 'Looks like you need to add a title...',
-        media: MdSettingsSuggest
       }
     }
   },

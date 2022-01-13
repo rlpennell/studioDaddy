@@ -1,10 +1,10 @@
-import {MdLocalPlay as icon} from 'react-icons/md'
+import { MdOutlinePlayCircleOutline } from 'react-icons/md'
 
 export default {
   name: 'screening',
   title: 'Screening',
   type: 'document',
-  icon,
+  icon: MdOutlinePlayCircleOutline,
   fields: [
     {
       name: 'title',

@@ -1,6 +1,9 @@
+import { MdOutlineDocumentScanner } from 'react-icons/md'
+
 export default {
   name: 'page',
   title: 'Page',
+  icon: MdOutlineDocumentScanner,
   type: 'document',
   fields: [
     {

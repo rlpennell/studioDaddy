@@ -1,12 +1,10 @@
 import S from '@sanity/desk-tool/structure-builder'
-import categories from './categories'
 
 import { 
   MdMovieFilter, 
   MdOutlineLocalMovies, 
   MdOutlinePortrait, 
   MdOutlinePlayCircleOutline,
-  MdSettingsSuggest 
 } from 'react-icons/md'
 
 

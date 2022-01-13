@@ -1,6 +1,9 @@
+import { MdShoppingBasket } from 'react-icons/md'
+
 export default {
   name: 'product',
   title: 'Product',
+  icon: MdShoppingBasket,
   type: 'document',
   fields: [
     {

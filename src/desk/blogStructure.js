@@ -20,9 +20,14 @@ export default S.listItem()
         S.documentTypeListItem('post')
           .title('Posts')
           .icon(MdPhotoFilter),
-        S.documentTypeListItem('author')
+        S.listItem()
           .title('Authors')
-          .icon(MdOutlinePortrait),
+          .icon(MdOutlinePortrait)
+          .child(
+            S.documentList()
+              .title('Authors')
+              .filter(`_type == 'person' && isAuthor`)
+          ),
         S.documentTypeListItem('comment')
           .title('Comments')
           .icon(MdOutlineComment),

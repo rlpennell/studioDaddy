@@ -1,10 +1,10 @@
-import {MdLocalMovies as icon} from 'react-icons/md'
+import { MdOutlineLocalMovies } from 'react-icons/md'
 
 export default {
   name: 'movie',
   title: 'Movie',
   type: 'document',
-  icon,
+  icon: MdOutlineLocalMovies,
   fields: [
     {
       name: 'title',

@@ -10,7 +10,6 @@ import section from './objects/section'
 import subcategory from './documents/subcategory'
 import categoryGroup from './objects/categoryGroup'
 import allInputExamples from './documents/allInputExamples'
-import author from './documents/author'
 import post from './documents/post'
 import comment from './documents/comment'
 import siteSettings from './documents/siteSettings'
@@ -50,7 +49,6 @@ export default createSchema({
     categoryGroup,
     page,
     allInputExamples,
-    author,
     post,
     comment,
     siteSettings,

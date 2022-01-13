@@ -3,16 +3,17 @@ import { MdPhotoFilter } from 'react-icons/md'
 export default {
   name: 'post',
   title: 'Post',
+  icon: MdPhotoFilter,
   type: 'document',
   preview: {
     select: {
       title: 'title',
-      author: 'author.name',
+      subtitle: 'author.name',
     },
-    prepare({ title, author }) {
+    prepare({ title, subtitle }) {
       return {
         title,
-        author,
+        subtitle,
         media: MdPhotoFilter
       }
     }
@@ -36,7 +37,7 @@ export default {
       name: 'author',
       title: 'Author',
       type: 'reference',
-      to: {type: 'author'}
+      to: {type: 'person'}
     },
     {
       name: 'mainImage',

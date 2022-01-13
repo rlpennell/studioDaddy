@@ -3,6 +3,7 @@ import { MdOutlineComment } from 'react-icons/md'
 export default {
   name: 'comment',
   type: 'document',
+  icon: MdOutlineComment,
   title: 'Comment',
   preview: {
     select: {

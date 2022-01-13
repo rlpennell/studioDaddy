@@ -1,6 +1,9 @@
+import { MdOutlinePortrait } from 'react-icons/md'
+
 export default {
   name: 'vendor',
   title: 'Vendor',
+  icon: MdOutlinePortrait,
   type: 'document',
   fields: [
     {
