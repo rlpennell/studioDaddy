@@ -11,7 +11,8 @@ export default {
   fields: [
     {
       name: 'title',
-      type: 'string'
+      type: 'string',
+      hidden: true
     },
     {
       name: 'createdAt',

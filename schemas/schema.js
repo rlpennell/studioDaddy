@@ -18,6 +18,9 @@ import figure from './objects/figure'
 import simpleBlockContent from './objects/simpleBlockContent'
 import project from './documents/project'
 import gallery from './objects/gallery'
+import grid from './objects/community/grid'
+import sandbox from './documents/sandbox'
+import freeform from './objects/community/freeform'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -40,6 +43,9 @@ export default createSchema({
     figure,
     simpleBlockContent,
     project,
-    gallery
+    gallery,
+    grid,
+    sandbox,
+    freeform
   ]),
 })

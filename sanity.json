@@ -13,7 +13,8 @@
     "@sanity/default-login",
     "@sanity/desk-tool",
     "@sanity/code-input",
-    "daddy-logo"
+    "daddy-logo",
+    "seo-tools"
   ],
   "env": {
     "development": {

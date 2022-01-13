@@ -1,13 +1,37 @@
 import S from '@sanity/desk-tool/structure-builder'
-import { MdCode } from 'react-icons/md'
-
+import { singleEdits } from '../singleEditPages'
 import blogStructure from './blogStructure'
 import portfolioStructure from './portfolioStructure'
+
+import { 
+  MdCode, 
+  MdOutlineBugReport, 
+  MdOutlineViewInAr, 
+  MdOutlineFlaky, 
+  MdGroupWork 
+} from 'react-icons/md'
 
 export default () =>
   S.list()
     .title('Examples')
     .items([
+      S.listItem()
+      .title('Sandbox')
+      .icon(MdOutlineBugReport)
+      .child(
+        S.list()
+          .title('Sandbox')
+          .items([
+            S.listItem()
+            .title('Hell Mouth')
+            .icon(MdOutlineBugReport)
+            .child(
+              S.document()
+                .schemaType('sandbox')
+                .documentId('sandbox')
+            ),
+          ])
+      ),
       S.listItem()
         .title('Custom Input Examples')
         .icon(MdCode)
@@ -18,5 +42,16 @@ export default () =>
         ),
       S.divider(),
       blogStructure,
-      portfolioStructure
+      portfolioStructure,
+      S.divider(),
+      S.listItem()
+        .title('All')
+        .icon(MdOutlineViewInAr)
+        .child(
+          S.list()
+            .title('All')
+            .items([
+              ...S.documentTypeListItems().filter(listItem => !singleEdits.includes(listItem.getId()))
+            ])
+        ),
     ])

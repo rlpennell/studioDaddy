@@ -72,7 +72,10 @@ export default {
                 name: 'reference',
                 type: 'reference',
                 to: [
-                  { type: 'post' }
+                  { type: 'post' },
+                  { type: 'author' },
+                  { type: 'project' },
+                  { type: 'category' }
                   // other types you may want to link to
                 ]
               }
