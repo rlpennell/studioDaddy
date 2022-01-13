@@ -2,6 +2,7 @@ import S from '@sanity/desk-tool/structure-builder'
 import { MdCode } from 'react-icons/md'
 
 import blogStructure from './blogStructure'
+import portfolioStructure from './portfolioStructure'
 
 export default () =>
   S.list()
@@ -16,5 +17,6 @@ export default () =>
             .documentId('allInputExamples')
         ),
       S.divider(),
-      blogStructure
+      blogStructure,
+      portfolioStructure
     ])

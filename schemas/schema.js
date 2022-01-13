@@ -10,11 +10,13 @@ import section from './objects/section'
 import subcategory from './documents/subcategory'
 import categoryGroup from './objects/categoryGroup'
 import allInputExamples from './documents/allInputExamples'
-import author from './documents/blog/author'
+import author from './documents/author'
 import post from './documents/blog/post'
 import comment from './documents/blog/comment'
 import siteSettings from './documents/siteSettings'
 import figure from './objects/figure'
+import simpleBlockContent from './objects/simpleBlockContent'
+import project from './documents/portfolio/project'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -34,6 +36,8 @@ export default createSchema({
     post,
     comment,
     siteSettings,
-    figure
+    figure,
+    simpleBlockContent,
+    project
   ]),
 })
