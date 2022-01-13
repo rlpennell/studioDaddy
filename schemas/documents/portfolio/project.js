@@ -1,5 +1,3 @@
-import {format,parseISO} from 'date-fns'
-
 export default {
   name: 'project',
   title: 'Project',
@@ -12,12 +10,11 @@ export default {
       media: 'mainImage'
     },
     prepare({title = 'No title', ended, slug = {}, media}) {
-      const dateSegment = format(parseISO(ended), 'yyyy/MM')
-      const path = `/${dateSegment}/${slug.current}/`
+      const path = `/${ended}/${slug.current}/`
       return {
         title,
         media,
-        subtitle: publishedAt ? path : 'Missing publishing date'
+        subtitle: ended ? ended : '♾'
       }
     }
   },
@@ -68,6 +65,11 @@ export default {
       name: 'mainImage',
       title: 'Main image',
       type: 'figure'
+    },
+    {
+      name: 'gallery',
+      title: 'Gallery',
+      type: 'gallery'
     },
     {
       name: 'categories',

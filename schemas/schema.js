@@ -17,6 +17,7 @@ import siteSettings from './documents/siteSettings'
 import figure from './objects/figure'
 import simpleBlockContent from './objects/simpleBlockContent'
 import project from './documents/portfolio/project'
+import gallery from './objects/gallery'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -38,6 +39,7 @@ export default createSchema({
     siteSettings,
     figure,
     simpleBlockContent,
-    project
+    project,
+    gallery
   ]),
 })
