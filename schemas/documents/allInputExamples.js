@@ -2,7 +2,7 @@ import ClientAsyncSelect from '../customInputs/ClientAsyncSelect'
 import UrlDownload from '../customInputs/UrlDownload'
 import AsyncSelect from '../customInputs/AsyncSelect'
 import CreatedAt from '../customInputs/CreatedAt'
-import { catHandler } from '../../lib/utils/catHandler'
+import { catHandler } from '../../src/utils/catHandler'
 
 export default {
   name: 'allInputExamples',
