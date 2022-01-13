@@ -28,6 +28,13 @@ import plotSummary from './objects/plotSummary'
 import plotSummaries from './objects/plotSummaries'
 import castMember from './objects/castMember'
 import crewMember from './objects/crewMember'
+import product from './documents/product'
+import vendor from './documents/vendor'
+import productVariant from './objects/productVariant'
+
+import localeString from './locale/String'
+import localeText from './locale/Text'
+import localeBlockContent from './locale/BlockContent'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -60,6 +67,12 @@ export default createSchema({
     plotSummary,
     plotSummaries,
     castMember,
-    crewMember
+    crewMember,
+    product,
+    vendor,
+    localeText,
+    localeBlockContent,
+    localeString,
+    productVariant,
   ]),
 })

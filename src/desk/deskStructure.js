@@ -11,6 +11,7 @@ import {
   MdGroupWork 
 } from 'react-icons/md'
 import movieStructure from './movieStructure'
+import ecommerceStructure from './ecommerceStructure'
 
 export default () =>
   S.list()
@@ -45,6 +46,7 @@ export default () =>
       blogStructure,
       portfolioStructure,
       movieStructure,
+      ecommerceStructure,
       S.divider(),
       S.listItem()
         .title('All')
