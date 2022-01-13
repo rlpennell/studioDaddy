@@ -14,7 +14,7 @@ import author from './documents/blog/author'
 import post from './documents/blog/post'
 import comment from './documents/blog/comment'
 import siteSettings from './documents/siteSettings'
-import figure from './documents/figure'
+import figure from './objects/figure'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({

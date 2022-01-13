@@ -1,7 +1,7 @@
-import ClientAsyncSelect from '../customInputs/ClientAsyncSelect'
-import UrlDownload from '../customInputs/UrlDownload'
-import AsyncSelect from '../customInputs/AsyncSelect'
-import CreatedAt from '../customInputs/CreatedAt'
+import ClientAsyncSelect from '../../components/ClientAsyncSelect'
+import UrlDownload from '../../components/UrlDownload'
+import AsyncSelect from '../../components/AsyncSelect'
+import CreatedAt from '../../components/CreatedAt'
 import { catHandler } from '../../src/utils/catHandler'
 
 export default {

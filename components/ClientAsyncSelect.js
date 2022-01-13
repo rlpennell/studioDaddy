@@ -3,7 +3,7 @@ import { Card, Stack, Select } from '@sanity/ui'
 import { FormField } from '@sanity/base/components'
 import PatchEvent, {set, unset} from '@sanity/form-builder/PatchEvent'
 import { useId } from "@reach/auto-id" 
-import { studioClient } from '../../src/utils/studioClient'
+import { studioClient } from '../src/utils/studioClient'
 
 const ClientAsyncSelect = React.forwardRef((props, ref) => {
   const [listItems, setListItems] = useState([])

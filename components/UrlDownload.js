@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { studioClient } from '../../src/utils/studioClient'
+import { studioClient } from '../src/utils/studioClient'
 
 const UrlDownload = props => {
   const [link, setLink] = useState()
