@@ -12,12 +12,12 @@ let queue = cq().limit({ concurrency: 2 }).process(function (task) {
 //We write our query for the document(s) we want to change fields on
 const query = `*[_id == 'allInputExamples']`
 
-//Create an object that contains the fields and values you'd like to write
+//Create an object that contains the fields and values you'd like to write/change
 const mutation = {
   title: 'Custom Input Examples'
 }
 
-const addField = async () => {
+const mutateDocs = async () => {
   // Use the configured Studio client to fetch our documents
   const docs = await studioClient.fetch(query)
   // Loop through all of the docs returned from our query
@@ -41,7 +41,7 @@ const addField = async () => {
   }
 }
 
-addField()
+mutateDocs()
 
 // execute this script by running 
-// $ sanity exec ./lib/utils/addField.js --withUserToken
+// $ sanity exec ./lib/utils/mutateDocs.js --withUserToken
