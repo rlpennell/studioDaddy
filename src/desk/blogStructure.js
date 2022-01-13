@@ -1,10 +1,9 @@
 import S from '@sanity/desk-tool/structure-builder'
+import categories from './categories'
 import { 
   MdLibraryBooks, 
   MdPhotoFilter, 
   MdOutlinePortrait, 
-  MdOutlinePhotoLibrary, 
-  MdOutlineImageSearch, 
   MdOutlineComment,
   MdSettingsSuggest 
 } from 'react-icons/md'
@@ -27,26 +26,7 @@ export default S.listItem()
         .title('Comments')
         .icon(MdOutlineComment),
       S.divider(),
-      S.documentTypeListItem('category')
-        .title('Categories')
-        .icon(MdOutlinePhotoLibrary),
-      S.documentTypeListItem('subcategory')
-        .title('Subcategories')
-        .icon(MdOutlineImageSearch),
-      // S.listItem()
-      //   .title('Subcategories by Category')
-      //   .icon(MdOutlineImageSearch)
-      //   .child(
-      //     S.documentTypeList('category')
-      //       .title('Subcategories')
-      //       //TODO fix this fucken create button
-      //       .child(categoryId =>
-      //         S.documentList()
-      //           .title('Subcategories')
-      //           .filter('_type == "subcategory" && $categoryId == category._ref')
-      //           .params({ categoryId })
-      //       )
-      //   ),
+      ...categories,
       S.divider(),
       S.listItem()
         .title('Site Settings')

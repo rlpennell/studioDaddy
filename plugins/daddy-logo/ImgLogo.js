@@ -4,8 +4,9 @@ import React from 'react'
 // Notice how we're "importing" the path from a local image - when building the
 // studio, this image will automatically be part of the output bundle, with a
 // hash that will make it easy to invalidate on changes.
-import jesus from './jesus.png'
+import god from './god.png'
 
-const ImgLogo = () => <img src={jesus} style={{height: '30px'}}/>
+const ImgLogo = () => <img src={god} /> 
+
 
 export default ImgLogo
