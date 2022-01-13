@@ -9,4 +9,18 @@ export default [
   S.documentTypeListItem('subcategory')
     .title('Subcategories')
     .icon(MdOutlineImageSearch),
+// S.listItem()
+//   .title('Subcategories by Category')
+//   .icon(MdOutlineImageSearch)
+//   .child(
+//     S.documentTypeList('category')
+//       .title('Subcategories')
+//       //TODO fix this fucken create button
+//       .child(categoryId =>
+//         S.documentList()
+//           .title('Subcategories')
+//           .filter('_type == "subcategory" && $categoryId == category._ref')
+//           .params({ categoryId })
+//       )
+//   ),
 ]
