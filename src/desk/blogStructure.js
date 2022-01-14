@@ -9,7 +9,6 @@ import {
   MdSettingsSuggest 
 } from 'react-icons/md'
 
-
 export default S.listItem()
   .title('Blog Example')
   .icon(MdLibraryBooks)

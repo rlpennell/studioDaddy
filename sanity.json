@@ -33,8 +33,9 @@
     "@sanity/desk-tool",
     "@sanity/code-input",
     "daddy-logo",
-    "seo-tools",
-    "media"
+    "media",
+    "seo-pane",
+    "asset-source-unsplash"
   ],
   "env": {
     "development": {
@@ -67,6 +68,10 @@
     {
       "implements": "part:@sanity/form-builder/input/file/asset-sources",
       "path": "./src/assetSources.js"
+    },
+    {
+      "implements": "part:@sanity/production-preview/resolve-production-url",
+      "path": "./src/resolveProductionUrl.js"
     }
   ]
 }
