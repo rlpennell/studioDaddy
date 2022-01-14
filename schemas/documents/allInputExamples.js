@@ -1,7 +1,7 @@
-import ClientAsyncSelect from '../../components/ClientAsyncSelect'
-import UrlDownload from '../../components/UrlDownload'
-import AsyncSelect from '../../components/AsyncSelect'
-import CreatedAt from '../../components/CreatedAt'
+import ClientAsyncSelect from '../components/ClientAsyncSelect'
+import UrlDownload from '../components/UrlDownload'
+import AsyncSelect from '../components/AsyncSelect'
+import CreatedAt from '../components/CreatedAt'
 import { catHandler } from '../../src/utils/catHandler'
 
 export default {
@@ -71,5 +71,9 @@ export default {
       },
       inputComponent: AsyncSelect
     },
+    {
+      name: 'contact',
+      type: 'contact'
+    }
   ]
 }

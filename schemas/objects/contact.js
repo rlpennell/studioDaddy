@@ -1,23 +1,5 @@
-import PathInput from "../../components/PathInput"
-
-const socials = [
-  {
-    title: 'Github',
-    prefix: 'https://github.com/',
-  },
-  {
-    title: 'Twitter',
-    prefix: 'https://twitter.com/',
-  },
-  {
-    title: 'LinkedIn',
-    prefix: 'https://www.linkedin.com/in/',
-  },
-  {
-    title: 'Dev.to',
-    prefix: 'https://dev.to/',
-  },
-]
+import PathInput from "../components/PathInput"
+import { socials } from "../inputs/socials";
 
 const socialInputs = socials.map(item => ({
   name: item.title.toLowerCase().split('.')[0],

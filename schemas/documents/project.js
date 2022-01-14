@@ -17,7 +17,7 @@ export default {
       return {
         title,
         media,
-        subtitle: ended ? ended : '♾'
+        subtitle: ended ? ended : 'In progress'
       }
     }
   },
