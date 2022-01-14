@@ -33,7 +33,8 @@
     "@sanity/desk-tool",
     "@sanity/code-input",
     "daddy-logo",
-    "seo-tools"
+    "seo-tools",
+    "media"
   ],
   "env": {
     "development": {
@@ -58,6 +59,14 @@
     {
       "implements": "part:@sanity/base/document-actions/resolver",
       "path": "./src/resolveDocumentActions.js"
+    },
+    {
+      "implements": "part:@sanity/form-builder/input/image/asset-sources",
+      "path": "./src/assetSources.js"
+    },
+    {
+      "implements": "part:@sanity/form-builder/input/file/asset-sources",
+      "path": "./src/assetSources.js"
     }
   ]
 }
