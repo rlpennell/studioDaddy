@@ -1,5 +1,7 @@
 import { MdOutlinePortrait } from 'react-icons/md'
 
+console.log(process)
+
 export default {
   name: 'person',
   title: 'Person',
@@ -38,6 +40,11 @@ export default {
       title: 'Is an Author?',
       type: 'boolean',
       initialValue: true
+    },
+    {
+      name: 'location',
+      title: 'Location',
+      type: 'geopoint'
     }
   ],
 }

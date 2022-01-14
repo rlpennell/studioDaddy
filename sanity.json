@@ -35,7 +35,8 @@
     "daddy-logo",
     "media",
     "seo-pane",
-    "asset-source-unsplash"
+    "asset-source-unsplash",
+    "mapbox-input"
   ],
   "env": {
     "development": {
