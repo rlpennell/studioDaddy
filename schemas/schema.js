@@ -30,10 +30,10 @@ import crewMember from './objects/crewMember'
 import product from './documents/product'
 import vendor from './documents/vendor'
 import productVariant from './objects/productVariant'
-
 import localeString from './locale/String'
 import localeText from './locale/Text'
 import localeBlockContent from './locale/BlockContent'
+import contact from './objects/contact'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -72,5 +72,6 @@ export default createSchema({
     localeBlockContent,
     localeString,
     productVariant,
+    contact
   ]),
 })

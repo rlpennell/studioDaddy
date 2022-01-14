@@ -36,15 +36,20 @@ export default {
       type: 'simpleBlockContent'
     },
     {
-      name: 'isAuthor',
-      title: 'Is an Author?',
-      type: 'boolean',
-      initialValue: true
+      name: 'contact',
+      title: 'Contact Info',
+      type: 'contact'
     },
     {
       name: 'location',
       title: 'Location',
       type: 'geopoint'
+    },
+    {
+      name: 'isAuthor',
+      type: 'boolean',
+      initialValue: true,
+      hidden: true
     }
   ],
 }

@@ -17,5 +17,43 @@ export default {
         { type: 'grid' },
       ]
     },
+    {
+      name: 'radioCollection',
+      title: 'Radio Collection',
+      type: 'object',
+      options: {
+        columns: 2
+      },
+      fields: [
+        {
+          name: 'radioOne',
+          title: 'Radio One',
+          type: 'string',
+          options: {
+            list: [
+              { title: 'Default', value: 'default' },
+              { title: 'Yes', value: 'yes' },
+              { title: 'No', value: 'No' }
+            ],
+            layout: 'radio',
+            direction: 'horizontal'
+          }
+        },
+        {
+          name: 'radioTwo',
+          title: 'Radio Two',
+          type: 'string',
+          options: {
+            list: [
+              { title: 'Default', value: 'default' },
+              { title: 'Yes', value: 'yes' },
+              { title: 'No', value: 'No' }
+            ],
+            layout: 'radio',
+            direction: 'horizontal'
+          }
+        }
+      ]
+    }
   ]
 }
