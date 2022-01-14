@@ -19,9 +19,14 @@ export default S.listItem()
       S.documentTypeListItem('project')
         .title('Projects')
         .icon(MdBedroomBaby),
-      S.documentTypeListItem('person')
-        .title('Members')
-        .icon(MdOutlinePortrait),
+      S.listItem()
+        .title('Authors')
+        .icon(MdOutlinePortrait)
+        .child(
+          S.documentList()
+            .title('Authors')
+            .filter(`_type == 'person' && isAuthor`)
+        ),
       S.divider(),
       ...categories,
       S.divider(),

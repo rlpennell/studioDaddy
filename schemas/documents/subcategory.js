@@ -12,14 +12,19 @@ export default {
   fields: [
     {
       name: "title",
-      title: "Name",
-      description: "This will be the displayed name on the site",
       type: "string",
     },
     {
       name: "description",
       title: "Description",
       type: "text",
+    },
+    {
+      name: 'slug',
+      type: 'slug',
+      options: {
+        source: 'title'
+      }
     },
     {
       name: "category",

@@ -13,7 +13,6 @@ export default {
       name: 'name',
       title: 'Name',
       type: 'string',
-      description: 'Please use "Firstname Lastname" format',
     },
     {
       name: 'slug',
@@ -37,7 +36,8 @@ export default {
     {
       name: 'isAuthor',
       title: 'Is an Author?',
-      type: 'boolean'
+      type: 'boolean',
+      initialValue: true
     }
   ],
 }

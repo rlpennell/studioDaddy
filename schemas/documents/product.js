@@ -67,7 +67,7 @@ export default {
       of: [
         {
           type: 'reference',
-          to: {type: 'category'},
+          to: {type: 'subcategory'},
         },
       ],
     },
