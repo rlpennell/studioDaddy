@@ -30,6 +30,7 @@
     "sanity-plugin-asset-source-unsplash": "^0.1.5",
     "sanity-plugin-media": "^1.4.4",
     "sanity-plugin-seo-pane": "^1.2.2",
+    "sanity-super-pane": "^1.0.0-alpha.11",
     "styled-components": "^5.2.0"
   }
 }

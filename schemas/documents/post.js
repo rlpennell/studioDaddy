@@ -60,5 +60,29 @@ export default {
       title: 'Body',
       type: 'blockContent'
     }
+  ],
+  orderings: [
+    {
+      title: 'Author',
+      name: 'author',
+      by: [
+        {field: 'author.name', direction: 'asc'}
+      ]
+    },
+    {
+      title: 'Date, Asc',
+      name: 'dateAsc',
+      by: [
+        {field: 'publishedAt', direction: 'asc'}
+      ]
+    },
+    {
+      title: 'Date, Desc',
+      name: 'dateDesc',
+      by: [
+        {field: 'publishedAt', direction: 'desc'}
+      ]
+    },
   ]
+
 }

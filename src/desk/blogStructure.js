@@ -1,9 +1,11 @@
 import S from '@sanity/desk-tool/structure-builder'
+import { createSuperPane } from 'sanity-super-pane'
 import categories from './categories'
 
 import { 
   MdLibraryBooks, 
   MdPhotoFilter, 
+  MdRotate90DegreesCcw,
   MdOutlinePortrait, 
   MdOutlineComment,
   MdSettingsSuggest 
@@ -19,6 +21,10 @@ export default S.listItem()
         S.documentTypeListItem('post')
           .title('Posts')
           .icon(MdPhotoFilter),
+        S.listItem()
+          .title('Bulk Post Actions')
+          .icon(MdRotate90DegreesCcw)
+          .child(createSuperPane('post', S)),
         S.listItem()
           .title('Authors')
           .icon(MdOutlinePortrait)
