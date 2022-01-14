@@ -1,8 +1,10 @@
 import S from '@sanity/desk-tool/structure-builder'
+import { createSuperPane } from 'sanity-super-pane'
 import categories from './categories'
 
 import { 
   MdStore, 
+  MdRotate90DegreesCcw,
   MdShoppingBasket, 
   MdOutlinePortrait, 
   MdSettingsSuggest 
@@ -19,6 +21,10 @@ export default S.listItem()
         S.documentTypeListItem('product')
           .title('Products')
           .icon(MdShoppingBasket),
+        S.listItem()
+          .title('Bulk Product Actions')
+          .icon(MdRotate90DegreesCcw)
+          .child(createSuperPane('product', S)),
         S.documentTypeListItem('vendor')
           .title('Vendors')
           .icon(MdOutlinePortrait),
