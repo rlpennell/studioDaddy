@@ -36,6 +36,7 @@ export default {
           name: 'section',
           title: 'Section',
           type: 'string',
+          hidden: ({document}) => !document.referenceField.page,
           inputComponent: ClientAsyncSelect
         }
       ]

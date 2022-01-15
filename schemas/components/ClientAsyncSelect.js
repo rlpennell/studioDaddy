@@ -37,7 +37,7 @@ const ClientAsyncSelect = React.forwardRef((props, ref) => {
 
   useEffect(() => {
     const getSections = async () => {
-      const items = await studioClient.fetch(`*[_id == $id][0].sections[].title`, {id: parent.page._ref})
+      const items = await studioClient.fetch(`*[_id == $id][0].sections[].title`, {id: parent.page._ref ? parent.page._ref : ''})
       setListItems(items)
     }
 
@@ -68,7 +68,7 @@ const ClientAsyncSelect = React.forwardRef((props, ref) => {
             onChange={handleChange}       // A function to call when the input value changes
           >
             <option value={'---'}>---</option>
-            {listItems.map(item => (
+            {listItems && listItems.map(item => (
               <option 
                 key={item} 
                 value={item}
