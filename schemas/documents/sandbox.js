@@ -1,3 +1,5 @@
+import UrlWithButton from '../components/UrlWithButton'
+
 export default {
   name: 'sandbox',
   type: 'document',
@@ -54,6 +56,20 @@ export default {
           }
         }
       ]
+    },
+    {
+      name: 'multiselect',
+      title: 'Multiselect',
+      type: 'array',
+      of: [{ type: 'string' }],
+      options: {
+        list: [
+          { title: 'USA ', value: 'usa' },
+          { title: 'Germany ', value: 'germany' },
+          { title: 'France ', value: 'france' },
+          { title: 'Poland ', value: 'poland' }
+        ]
+      }
     }
   ]
 }

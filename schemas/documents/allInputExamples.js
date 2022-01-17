@@ -2,6 +2,7 @@ import ClientAsyncSelect from '../components/ClientAsyncSelect'
 import UrlDownload from '../components/UrlDownload'
 import AsyncSelect from '../components/AsyncSelect'
 import CreatedAt from '../components/CreatedAt'
+import UrlWithButton from '../components/UrlWithButton'
 import { catHandler } from '../../src/utils/catHandler'
 
 export default {
@@ -75,6 +76,24 @@ export default {
     {
       name: 'contact',
       type: 'contact'
+    },
+    {
+      name: 'fetchObject',
+      title: 'Fetch Stuff with This Object',
+      type: 'object',
+      fields: [
+        {
+          name: 'url',
+          title: 'Url to Fetch',
+          type: 'url',
+          inputComponent: UrlWithButton
+        },
+        {
+          name: 'fieldToWrite',
+          title: 'Field to Write',
+          type: 'string'
+        }
+      ]
     }
   ]
 }

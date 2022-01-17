@@ -28,7 +28,7 @@ export default S.listItem()
         S.listItem()
           .title('Authors')
           .icon(MdOutlinePortrait)
-          .child(personID =>
+          .child(
             S.documentList()
               .title('Authors')
               .filter(`_type == 'person' && isAuthor`)
