@@ -17,9 +17,7 @@ import figure from './objects/figure'
 import simpleBlockContent from './objects/simpleBlockContent'
 import project from './documents/project'
 import gallery from './objects/gallery'
-import grid from './objects/community/grid'
 import sandbox from './documents/sandbox'
-import freeform from './objects/community/freeform'
 import movie from './documents/movie'
 import person from './documents/person'
 import screening from './documents/screening'
@@ -57,9 +55,7 @@ export default createSchema({
     simpleBlockContent,
     project,
     gallery,
-    grid,
     sandbox,
-    freeform,
     movie,
     person,
     screening,

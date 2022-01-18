@@ -1,6 +1,10 @@
 export default {
   name: 'sandbox',
   type: 'document',
+  groups: [
+    { name: 'common', title: 'Common'},
+    { name: 'community', title: 'Community'}
+  ],
   fields: [
     {
       name: 'title',
@@ -10,20 +14,14 @@ export default {
       hidden: true
     },
     {
-      title: 'Page Sections',
-      name: 'modules',
-      type: 'array',
-      of: [
-        { type: 'grid' },
-      ]
-    },
-    {
       name: 'radioCollection',
       title: 'Radio Collection',
+      description: 'An example of using columns in an object for @RyanMurray',
       type: 'object',
       options: {
         columns: 2
       },
+      group: 'community',
       fields: [
         {
           name: 'radioOne',
@@ -58,6 +56,7 @@ export default {
     {
       name: 'slug',
       title: 'Slug',
+      description: 'A slug field that ignores apostrophes and becomes readOnly after being set once',
       type: 'slug',
       readOnly: ({ document }) => document?.slug,
       slugify: input => input
@@ -68,7 +67,37 @@ export default {
         .replace(/\-\-+/g, '-'),
       options: {
         source: 'title'
-      }
+      },
+      group: 'common'
+    },
+    {
+      name: 'multiSelect',
+      title: 'Multi Select',
+      type: 'array',
+      of: [
+        { type: 'string' }
+      ],
+      options: {
+        list: [
+          { title: 'Option 1', value: 'option1' },
+          { title: 'Option 2', value: 'option2' },
+          { title: 'Option 3', value: 'option3' }
+        ]
+      },
+      group: 'common'
+    },
+    {
+      name: 'dropDown',
+      title: 'Drop Down',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Option 1', value: 'option1' },
+          { title: 'Option 2', value: 'option2' },
+          { title: 'Option 3', value: 'option3' }
+        ]
+      },
+      group: 'common'
     }
   ]
 }
