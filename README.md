@@ -9,6 +9,5 @@ This is a my work-horse Studio that contains
 1. `git clone` this Studio.
 2. Install dependencies w/`npm i` and `sanity install`
 3. Import the backup dataset in `/data` by running `sanity import dataset ./data/production/tar/gz <your-dataset-name>`
-...
-7. Profit!
+
 
