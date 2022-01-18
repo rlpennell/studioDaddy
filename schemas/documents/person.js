@@ -1,7 +1,5 @@
 import { MdOutlinePortrait } from 'react-icons/md'
 
-console.log(process)
-
 export default {
   name: 'person',
   title: 'Person',

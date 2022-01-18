@@ -13,7 +13,7 @@ let queue = cq().limit({ concurrency: 2 }).process(function (task) {
 //Create an object that contains the fields and values you'd like to write/change
 
 const mutateDocs = async () => {
-  const query = `*[_type == 'subcategory']`
+  const query = `*[_type == 'sandbox']`
   // Use the configured Studio client to fetch our documents
   const docs = await studioClient.fetch(query)
   // Loop through all of the docs returned from our query
@@ -24,7 +24,7 @@ const mutateDocs = async () => {
       // Tell the client to patch the current document
       studioClient.patch(doc._id)
         // Set the fields we specified in our mutation
-        .unset(['parents'])
+        .unset(['multiselect'])
         // Commit the changes
         .commit()
         .then(updatedDoc => {

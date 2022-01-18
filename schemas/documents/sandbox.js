@@ -1,5 +1,3 @@
-import UrlWithButton from '../components/UrlWithButton'
-
 export default {
   name: 'sandbox',
   type: 'document',
@@ -58,17 +56,18 @@ export default {
       ]
     },
     {
-      name: 'multiselect',
-      title: 'Multiselect',
-      type: 'array',
-      of: [{ type: 'string' }],
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      readOnly: ({ document }) => document?.slug,
+      slugify: input => input
+        .toLowerCase()
+        .trim()
+        .replace(/\s+/g, '-')
+        .replace(/[^\w\-]+/g, '')
+        .replace(/\-\-+/g, '-'),
       options: {
-        list: [
-          { title: 'USA ', value: 'usa' },
-          { title: 'Germany ', value: 'germany' },
-          { title: 'France ', value: 'france' },
-          { title: 'Poland ', value: 'poland' }
-        ]
+        source: 'title'
       }
     }
   ]

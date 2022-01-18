@@ -40,22 +40,13 @@ export default () =>
     .title('Examples')
     .items([
       S.listItem()
-      .title('Sandbox')
-      .icon(MdOutlineBugReport)
-      .child(
-        S.list()
-          .title('Sandbox')
-          .items([
-            S.listItem()
-            .title('Hell Mouth')
-            .icon(MdOutlineBugReport)
-            .child(
-              S.document()
-                .schemaType('sandbox')
-                .documentId('sandbox')
-            ),
-          ])
-      ),
+        .title('Sandbox')
+        .icon(MdOutlineBugReport)
+        .child(
+          S.document()
+            .schemaType('sandbox')
+            .documentId('sandbox')
+        ),
       S.listItem()
         .title('Custom Input Examples')
         .icon(MdCode)

@@ -4,6 +4,7 @@ import AsyncSelect from '../components/AsyncSelect'
 import CreatedAt from '../components/CreatedAt'
 import UrlWithButton from '../components/UrlWithButton'
 import { catHandler } from '../../src/utils/catHandler'
+import ReferenceSelect from "../components/ReferenceSelect"
 
 export default {
   name: 'allInputExamples',
@@ -94,6 +95,18 @@ export default {
           type: 'string'
         }
       ]
-    }
+    },
+    {
+      name: 'ReferenceMultiSelect',
+      title: 'Country',
+      type: 'array',
+      of: [
+        {
+         type: 'reference',
+         to: { type: 'country'}
+        }
+      ],
+      inputComponent: ReferenceSelect
+    },
   ]
 }
