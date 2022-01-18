@@ -80,6 +80,7 @@ export default {
     },
     {
       name: 'fetchObject',
+      description: 'A naive component that will fetch data from the specified URL and write something to the field below',
       title: 'Fetch Stuff with This Object',
       type: 'object',
       fields: [
@@ -98,6 +99,7 @@ export default {
     },
     {
       name: 'ReferenceMultiSelect',
+      description: 'This will create a multiselect checkbox list of references',
       title: 'Country',
       type: 'array',
       of: [

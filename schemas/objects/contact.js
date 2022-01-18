@@ -21,7 +21,7 @@ export default {
   name: 'contact',
   title: 'Contact Info',
   type: 'object',
-  description: "All of these are optional. Include only your handle or profile ID - or paste the full URL and we'll format it.",
+  description: "Can handle pasting of an entire URL or just a username. A rebuild of the Community Studio version using @sanity/ui",
   fields: [
     {
       name: 'email',
