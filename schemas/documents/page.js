@@ -18,6 +18,25 @@ export default {
       of: [
         { type: 'section' }
       ]
+    },
+    {
+      name: 'content',
+      title: 'content',
+      type: 'array',
+      of: [
+        { type: 'number' }
+      ]
+    },
+    {
+      name: 'orderBy',
+      title: 'Order By',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Latest', value: 'latest'},
+          { title: 'Old', value: 'old'},
+        ]
+      }
     }
   ]
 }

@@ -32,6 +32,7 @@ export default S.listItem()
             S.documentList()
               .title('Authors')
               .filter(`_type == 'person' && isAuthor`)
+              .canHandleIntent(S.documentTypeList('person').getCanHandleIntent())
           ),
         S.documentTypeListItem('comment')
           .title('Comments')
