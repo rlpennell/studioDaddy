@@ -5,6 +5,7 @@ import CreatedAt from '../components/CreatedAt'
 import UrlWithButton from '../components/UrlWithButton'
 import { catHandler } from '../../src/utils/catHandler'
 import ReferenceSelect from "../components/ReferenceSelect"
+import Wireframe from '../components/Wireframe'
 
 export default {
   name: 'allInputExamples',
@@ -109,6 +110,25 @@ export default {
         }
       ],
       inputComponent: ReferenceSelect
+    },
+    {
+      name: 'template',
+      title: 'Template',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Template A', value: 'a' },
+          { title: 'Template B', value: 'b' },
+          { title: 'Template C', value: 'c' },
+        ]
+      }
+    },
+    {
+      name: 'wireframe',
+      title: 'Wireframe',
+      type: 'string',
+      hidden: ({ document }) => !document?.template,
+      inputComponent: Wireframe
     },
   ]
 }

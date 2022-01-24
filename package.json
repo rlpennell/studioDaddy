@@ -8,7 +8,8 @@
   "license": "UNLICENSED",
   "scripts": {
     "start": "sanity start",
-    "build": "sanity build"
+    "build": "sanity build",
+    "dev": "sanity start --port 3000"
   },
   "keywords": [
     "sanity"
@@ -18,6 +19,7 @@
     "@sanity/base": "2.24.1-pte.115",
     "@sanity/code-input": "2.24.1-pte.115",
     "@sanity/core": "2.24.1-pte.115",
+    "@sanity/dashboard": "^2.25.0",
     "@sanity/default-layout": "2.24.1-pte.115",
     "@sanity/default-login": "2.24.1-pte.115",
     "@sanity/desk-tool": "2.24.1-pte.115",

@@ -1548,6 +1548,18 @@
     postcss-value-parser "^3.3.0"
     source-list-map "^2.0.0"
 
+"@sanity/dashboard@^2.25.0":
+  version "2.25.0"
+  resolved "https://registry.npmjs.org/@sanity/dashboard/-/dashboard-2.25.0.tgz#dd8b091e7f549bdadaeb10b005bb3f3a3d917523"
+  integrity sha512-y26O7jdXUhw+yoZvYzpJRhiOdK8eHte5bCpIz/5cMXUT7eyjXEgspw9FNMYzl3YAqQy1oLCAzTJlG8N5GzZMrw==
+  dependencies:
+    "@sanity/icons" "^1.2.1"
+    "@sanity/image-url" "^1.0.1"
+    "@sanity/types" "2.24.0"
+    "@sanity/ui" "^0.37.2"
+    lodash "^4.17.15"
+    rxjs "^6.5.3"
+
 "@sanity/data-aspects@2.24.1-pte.115+3d16c3e828":
   version "2.24.1-pte.115"
   resolved "https://registry.npmjs.org/@sanity/data-aspects/-/data-aspects-2.24.1-pte.115.tgz"
@@ -1953,6 +1965,17 @@
     "@types/lodash" "^4.14.149"
     lodash "^4.17.15"
 
+"@sanity/types@2.24.0", "@sanity/types@^2.17.1":
+  version "2.24.0"
+  resolved "https://registry.npmjs.org/@sanity/types/-/types-2.24.0.tgz"
+  integrity sha512-EuInJrMI7lSfpPqjFVvVop+ycwLLDmaHARvlQW7/qMtjtj0RNu5OnsrvIt233MbmIPb5S5d9kBtrN8N05MkWfw==
+  dependencies:
+    "@sanity/client" "2.23.2"
+    "@sanity/color" "^2.1.5"
+    "@types/react" "^17.0.0"
+    react "17.0.1"
+    rxjs "^6.5.3"
+
 "@sanity/types@2.24.1-pte.115+3d16c3e828":
   version "2.24.1-pte.115"
   resolved "https://registry.npmjs.org/@sanity/types/-/types-2.24.1-pte.115.tgz"
@@ -1964,18 +1987,7 @@
     react "17.0.1"
     rxjs "^6.5.3"
 
-"@sanity/types@^2.17.1":
-  version "2.24.0"
-  resolved "https://registry.npmjs.org/@sanity/types/-/types-2.24.0.tgz"
-  integrity sha512-EuInJrMI7lSfpPqjFVvVop+ycwLLDmaHARvlQW7/qMtjtj0RNu5OnsrvIt233MbmIPb5S5d9kBtrN8N05MkWfw==
-  dependencies:
-    "@sanity/client" "2.23.2"
-    "@sanity/color" "^2.1.5"
-    "@types/react" "^17.0.0"
-    react "17.0.1"
-    rxjs "^6.5.3"
-
-"@sanity/ui@>=0.36.6", "@sanity/ui@^0.37.1":
+"@sanity/ui@>=0.36.6", "@sanity/ui@^0.37.1", "@sanity/ui@^0.37.2":
   version "0.37.2"
   resolved "https://registry.npmjs.org/@sanity/ui/-/ui-0.37.2.tgz"
   integrity sha512-WVPR06HCP325OjPuiAanXLFoSSdJrOV6/zEs9w7UuSH5ov0zOP2qWFGOxOu2aeZexpQCS73SFTb8+UXOOlRp0Q==
