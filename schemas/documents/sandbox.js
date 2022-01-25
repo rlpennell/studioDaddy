@@ -3,7 +3,7 @@ export default {
   type: 'document',
   groups: [
     { name: 'common', title: 'Common'},
-    { name: 'community', title: 'Community'}
+    { name: 'community', title: 'Community', default: true}
   ],
   fields: [
     {
@@ -59,14 +59,14 @@ export default {
       description: 'A slug field that ignores apostrophes and becomes readOnly after being set once',
       type: 'slug',
       readOnly: ({ document }) => document?.slug,
-      slugify: input => input
-        .toLowerCase()
-        .trim()
-        .replace(/\s+/g, '-')
-        .replace(/[^\w\-]+/g, '')
-        .replace(/\-\-+/g, '-'),
       options: {
-        source: 'title'
+        source: 'title',
+        slugify: input => input
+          .toLowerCase()
+          .trim()
+          .replace(/\s+/g, '-')
+          .replace(/[^\w\-]+/g, '')
+          .replace(/\-\-+/g, '-'),
       },
       group: 'common'
     },
