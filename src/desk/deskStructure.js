@@ -55,6 +55,7 @@ export default () =>
             .schemaType('allInputExamples')
             .documentId('allInputExamples')
         ),
+      
       S.divider(),
       blogStructure,
       portfolioStructure,

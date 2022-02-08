@@ -98,6 +98,19 @@ export default {
         ]
       },
       group: 'common'
-    }
+    },
+    {
+      title: 'Backgrounds',
+      name: 'backgrounds',
+      type: 'array',
+      of: [{ type: 'image', fields: [{ name: 'title', type: 'string', options: { isHighlighted: true }}] }],
+      group: 'community',
+      preview: {
+        select: {
+          title: "title",
+          media: "image"
+        }
+      }
+    },
   ]
 }

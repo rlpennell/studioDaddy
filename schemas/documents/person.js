@@ -39,11 +39,6 @@ export default {
       type: 'contact'
     },
     {
-      name: 'location',
-      title: 'Location',
-      type: 'geopoint'
-    },
-    {
       name: 'isAuthor',
       type: 'boolean',
       initialValue: true,

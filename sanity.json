@@ -36,7 +36,6 @@
     "media",
     "seo-pane",
     "asset-source-unsplash",
-    "mapbox-input",
     "@sanity/dashboard"
   ],
   "env": {
