@@ -33,6 +33,7 @@ import localeText from './locale/Text'
 import localeBlockContent from './locale/BlockContent'
 import contact from './objects/contact'
 import country from './documents/country'
+import langs from './objects/langs'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -70,6 +71,7 @@ export default createSchema({
     localeString,
     productVariant,
     contact,
-    country
+    country,
+    langs
   ]),
 })

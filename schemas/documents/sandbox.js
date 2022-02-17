@@ -1,9 +1,11 @@
+import PreviewComponent from "../components/PreviewComponent"
+
 export default {
   name: 'sandbox',
   type: 'document',
   groups: [
     { name: 'common', title: 'Common'},
-    { name: 'community', title: 'Community', default: true}
+    { name: 'community', title: 'Community'}
   ],
   fields: [
     {
@@ -103,14 +105,24 @@ export default {
       title: 'Backgrounds',
       name: 'backgrounds',
       type: 'array',
-      of: [{ type: 'image', fields: [{ name: 'title', type: 'string', options: { isHighlighted: true }}] }],
-      group: 'community',
-      preview: {
-        select: {
-          title: "title",
-          media: "image"
-        }
-      }
+      of: [{ type: 'localizedImage' }],
+
+    },
+    {
+      name: 'tags',
+      title: 'Tags',
+      type: 'array',
+      of: [{ type: 'reference', to: [{ type: 'category' }] }],
+    },
+    {
+      name: "slides",
+      title: "Slides",
+      type: "array",
+      of: [
+        {
+          type: 'figure',
+        },
+      ],
     },
   ]
 }

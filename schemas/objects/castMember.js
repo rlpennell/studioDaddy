@@ -1,3 +1,5 @@
+import PreviewComponent from "../components/PreviewComponent"
+
 export default {
   name: 'castMember',
   title: 'Cast Member',
@@ -28,8 +30,8 @@ export default {
   preview: {
     select: {
       subtitle: 'characterName',
-      title: 'person.name',
+      person: 'person',
       media: 'person.image',
-    },
-  },
+    }
+  }
 }

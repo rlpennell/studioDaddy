@@ -6,6 +6,7 @@ import UrlWithButton from '../components/UrlWithButton'
 import { catHandler } from '../../src/utils/catHandler'
 import ReferenceSelect from "../components/ReferenceSelect"
 import Wireframe from '../components/Wireframe'
+import StringWithLimits from '../components/StringWithLimits'
 
 export default {
   name: 'allInputExamples',
@@ -129,6 +130,6 @@ export default {
       type: 'string',
       hidden: ({ document }) => !document?.template,
       inputComponent: Wireframe
-    },
+    }
   ]
 }
