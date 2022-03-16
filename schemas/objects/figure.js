@@ -24,17 +24,5 @@ export default {
   ],
   options: {
     hotspot: true
-  },
-  preview: {
-    select: {
-      _key: '_key',
-      alt: 'alt',
-      caption: 'caption',
-      asset: 'asset'
-    },
-    prepare({ _key, alt, caption, asset }) {
-      return { _key, alt, caption, asset }
-    },
-    component: PreviewComponent
   }
 }

@@ -1,15 +1,15 @@
-import S from '@sanity/desk-tool/structure-builder'
-import { createSuperPane } from 'sanity-super-pane'
-import categories from './categories'
+import S from '@sanity/desk-tool/structure-builder';
+import { createSuperPane } from 'sanity-super-pane';
+import categories from './categories';
+import productsByVendor from './productsByVendor';
 
-import { 
-  MdStore, 
+import {
+  MdStore,
   MdRotate90DegreesCcw,
-  MdShoppingBasket, 
-  MdOutlinePortrait, 
-  MdSettingsSuggest 
-} from 'react-icons/md'
-
+  MdShoppingBasket,
+  MdOutlinePortrait,
+  MdSettingsSuggest,
+} from 'react-icons/md';
 
 export default S.listItem()
   .title('Ecommerce Example')
@@ -29,6 +29,8 @@ export default S.listItem()
           .title('Vendors')
           .icon(MdOutlinePortrait),
         S.divider(),
+        productsByVendor,
+        S.divider(),
         ...categories,
         S.divider(),
         S.listItem()
@@ -38,6 +40,6 @@ export default S.listItem()
             S.document()
               .schemaType('siteSettings')
               .documentId('ecommerceSiteSettings')
-          )
+          ),
       ])
-  )
+  );

@@ -1,4 +1,6 @@
 import { MdPhotoFilter } from 'react-icons/md'
+import { studioClient } from '../../src/utils/studioClient'
+import { v4 as uuid } from 'uuid'
 
 export default {
   name: 'post',
@@ -30,7 +32,8 @@ export default {
       type: 'slug',
       options: {
         source: 'title',
-        maxLength: 96
+        maxLength: 96,
+        isUnique: () => true
       }
     },
     {

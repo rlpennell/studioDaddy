@@ -1,1 +1,1 @@
-export const singleEdits = ['allInputExamples', 'siteSettings', 'sandbox']
+export const singleEdits = ['allInputExamples', 'siteSettings', 'sandbox', 'supportedLangs']

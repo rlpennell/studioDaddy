@@ -1,12 +1,12 @@
-import ClientAsyncSelect from '../components/ClientAsyncSelect'
-import UrlDownload from '../components/UrlDownload'
-import AsyncSelect from '../components/AsyncSelect'
-import CreatedAt from '../components/CreatedAt'
-import UrlWithButton from '../components/UrlWithButton'
-import { catHandler } from '../../src/utils/catHandler'
-import ReferenceSelect from "../components/ReferenceSelect"
-import Wireframe from '../components/Wireframe'
-import StringWithLimits from '../components/StringWithLimits'
+import ClientAsyncSelect from '../components/ClientAsyncSelect';
+import UrlDownload from '../components/UrlDownload';
+import AsyncSelect from '../components/AsyncSelect';
+import CreatedAt from '../components/CreatedAt';
+import UrlWithButton from '../components/UrlWithButton';
+import { catHandler } from '../../src/utils/catHandler';
+import ReferenceSelect from '../components/ReferenceSelect';
+import Wireframe from '../components/Wireframe';
+import StringWithLimits from '../components/StringWithLimits';
 
 export default {
   name: 'allInputExamples',
@@ -16,34 +16,35 @@ export default {
     {
       name: 'title',
       type: 'string',
-      hidden: true
+      hidden: true,
     },
     {
       name: 'createdAt',
       title: 'Display the _createdAt field within the document',
       type: 'string',
-      inputComponent: CreatedAt
+      inputComponent: CreatedAt,
     },
     {
       name: 'referenceField',
       title: 'Field within a Reference',
-      description: 'This field uses the @sanity/client to allow you to indicate a specific field within a selected reference', 
+      description:
+        'This field uses the @sanity/client to allow you to indicate a specific field within a selected reference',
       type: 'object',
       fields: [
         {
           name: 'page',
           title: 'Page',
           type: 'reference',
-          to: [{ type: 'page' }]
+          to: [{ type: 'page' }],
         },
         {
           name: 'section',
           title: 'Section',
           type: 'string',
-          hidden: ({document}) => !document.referenceField.page,
-          inputComponent: ClientAsyncSelect
-        }
-      ]
+          hidden: ({ document }) => !document.referenceField.page,
+          inputComponent: ClientAsyncSelect,
+        },
+      ],
     },
     {
       name: 'upload',
@@ -54,35 +55,37 @@ export default {
         {
           name: 'file',
           title: 'File',
-          type: 'file'
+          type: 'file',
         },
         {
           name: 'link',
           title: 'Link',
           type: 'string',
-          hidden: ({parent}) => !parent?.file,
+          hidden: ({ parent }) => !parent?.file,
           inputComponent: UrlDownload,
-        }
-      ]
+        },
+      ],
     },
     {
       name: 'asyncSelect',
       title: 'Asynchronous List Options',
-      description: 'Hits an API and populates a drop down select. Needs to be provided with a url and a handler for the response.',
+      description:
+        'Hits an API and populates a drop down select. Needs to be provided with a url and a handler for the response.',
       type: 'string',
       options: {
         url: 'https://catfact.ninja/breeds',
-        handler: catHandler
+        handler: catHandler,
       },
-      inputComponent: AsyncSelect
+      inputComponent: AsyncSelect,
     },
     {
       name: 'contact',
-      type: 'contact'
+      type: 'contact',
     },
     {
       name: 'fetchObject',
-      description: 'A naive component that will fetch data from the specified URL and write something to the field below',
+      description:
+        'A naive component that will fetch data from the specified URL and write something to the field below',
       title: 'Fetch Stuff with This Object',
       type: 'object',
       fields: [
@@ -90,14 +93,14 @@ export default {
           name: 'url',
           title: 'Url to Fetch',
           type: 'url',
-          inputComponent: UrlWithButton
+          inputComponent: UrlWithButton,
         },
         {
           name: 'fieldToWrite',
           title: 'Field to Write',
-          type: 'string'
-        }
-      ]
+          type: 'string',
+        },
+      ],
     },
     {
       name: 'ReferenceMultiSelect',
@@ -106,11 +109,11 @@ export default {
       type: 'array',
       of: [
         {
-         type: 'reference',
-         to: { type: 'country'}
-        }
+          type: 'reference',
+          to: { type: 'country' },
+        },
       ],
-      inputComponent: ReferenceSelect
+      inputComponent: ReferenceSelect,
     },
     {
       name: 'template',
@@ -121,15 +124,15 @@ export default {
           { title: 'Template A', value: 'a' },
           { title: 'Template B', value: 'b' },
           { title: 'Template C', value: 'c' },
-        ]
-      }
+        ],
+      },
     },
     {
       name: 'wireframe',
       title: 'Wireframe',
       type: 'string',
       hidden: ({ document }) => !document?.template,
-      inputComponent: Wireframe
-    }
-  ]
-}
+      inputComponent: Wireframe,
+    },
+  ],
+};

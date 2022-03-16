@@ -9,7 +9,7 @@ let queue = cq().limit({ concurrency: 2 }).process(function (task) {
 })
 
 //We write our query for the document(s) we want to delete
-const query = `*[_type == 'category' && !(title in ['Countries', 'Weapons', 'Foods'])]`
+const query = `*[_type == 'post']`
 
 const batchDelete = async () => {
   // Use the configured Studio client to fetch our documents

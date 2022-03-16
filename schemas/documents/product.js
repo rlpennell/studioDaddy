@@ -1,4 +1,4 @@
-import { MdShoppingBasket } from 'react-icons/md'
+import { MdShoppingBasket } from 'react-icons/md';
 
 export default {
   name: 'product',
@@ -53,7 +53,12 @@ export default {
       name: 'vendor',
       title: 'Vendor',
       type: 'reference',
-      to: {type: 'vendor'},
+      to: { type: 'vendor' },
+    },
+    {
+      name: 'vendor_',
+      title: 'Vendor',
+      type: 'string',
     },
     {
       name: 'blurb',
@@ -67,7 +72,7 @@ export default {
       of: [
         {
           type: 'reference',
-          to: {type: 'subcategory'},
+          to: { type: 'subcategory' },
         },
       ],
     },
@@ -85,4 +90,4 @@ export default {
       media: 'defaultProductVariant.images[0]',
     },
   },
-}
+};

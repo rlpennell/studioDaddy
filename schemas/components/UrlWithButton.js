@@ -21,6 +21,8 @@ const UrlWithButton = React.forwardRef((props, ref) => {
     document
   } = props
 
+  console.log(onFocus)
+
 
   // Creates a change handler for patching data
   const handleChange = React.useCallback(

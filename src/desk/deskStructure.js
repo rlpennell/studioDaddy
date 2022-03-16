@@ -1,22 +1,21 @@
-import S from '@sanity/desk-tool/structure-builder'
-import { singleEdits } from '../singleEditPages'
-import blogStructure from './blogStructure'
-import portfolioStructure from './portfolioStructure'
-import SeoPane from 'sanity-plugin-seo-pane'
-import movieStructure from './movieStructure'
-import ecommerceStructure from './ecommerceStructure'
-import resolveProductionUrl from '../resolveProductionUrl'
+import S from '@sanity/desk-tool/structure-builder';
+import { singleEdits } from '../singleEditPages';
+import blogStructure from './blogStructure';
+import portfolioStructure from './portfolioStructure';
+import SeoPane from 'sanity-plugin-seo-pane';
+import movieStructure from './movieStructure';
+import ecommerceStructure from './ecommerceStructure';
+import resolveProductionUrl from '../resolveProductionUrl';
 
-import { 
-  MdCode, 
-  MdOutlineBugReport, 
-  MdOutlineViewInAr, 
-  MdOutlineFlaky, 
-  MdGroupWork 
-} from 'react-icons/md'
+import {
+  MdCode,
+  MdOutlineBugReport,
+  MdOutlineViewInAr,
+  MdOutlineFlaky,
+  MdGroupWork,
+} from 'react-icons/md';
 
-
-export const getDefaultDocumentNode = ({documentId, schemaType}) => {
+export const getDefaultDocumentNode = ({ documentId, schemaType }) => {
   if (schemaType == 'post') {
     return S.document().views([
       S.view.form(),
@@ -28,12 +27,10 @@ export const getDefaultDocumentNode = ({documentId, schemaType}) => {
           url: (doc) => resolveProductionUrl(doc),
         })
         .title('SEO'),
-    ])
+    ]);
   }
-  return S.document().views([
-    S.view.form(),
-  ])
-}
+  return S.document().views([S.view.form()]);
+};
 
 export default () =>
   S.list()
@@ -42,11 +39,7 @@ export default () =>
       S.listItem()
         .title('Sandbox')
         .icon(MdOutlineBugReport)
-        .child(
-          S.document()
-            .schemaType('sandbox')
-            .documentId('sandbox')
-        ),
+        .child(S.document().schemaType('sandbox').documentId('sandbox')),
       S.listItem()
         .title('Custom Input Examples')
         .icon(MdCode)
@@ -55,7 +48,6 @@ export default () =>
             .schemaType('allInputExamples')
             .documentId('allInputExamples')
         ),
-      
       S.divider(),
       blogStructure,
       portfolioStructure,
@@ -69,8 +61,17 @@ export default () =>
           S.list()
             .title('All')
             .items([
-              ...S.documentTypeListItems()
-                .filter(listItem => !singleEdits.includes(listItem.getId()))
+              ...S.documentTypeListItems().filter(
+                (listItem) => !singleEdits.includes(listItem.getId())
+              ),
             ])
         ),
-    ])
+      S.listItem()
+        .title('Types')
+        .icon(MdGroupWork)
+        .child(
+          S.documentList()
+            .title('Types')
+            .filter('_type in ["post", "category", "movie"]')
+        ),
+    ]);

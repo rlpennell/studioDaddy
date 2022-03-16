@@ -1,15 +1,15 @@
-import S from '@sanity/desk-tool/structure-builder'
-import { createSuperPane } from 'sanity-super-pane'
-import categories from './categories'
+import S from '@sanity/desk-tool/structure-builder';
+import { createSuperPane } from 'sanity-super-pane';
+import categories from './categories';
 
-import { 
-  MdLibraryBooks, 
-  MdPhotoFilter, 
+import {
+  MdLibraryBooks,
+  MdPhotoFilter,
   MdRotate90DegreesCcw,
-  MdOutlinePortrait, 
+  MdOutlinePortrait,
   MdOutlineComment,
-  MdSettingsSuggest 
-} from 'react-icons/md'
+  MdSettingsSuggest,
+} from 'react-icons/md';
 
 export default S.listItem()
   .title('Blog Example')
@@ -18,9 +18,7 @@ export default S.listItem()
     S.list()
       .title('Blog Example')
       .items([
-        S.documentTypeListItem('post')
-          .title('Posts')
-          .icon(MdPhotoFilter),
+        S.documentTypeListItem('post').title('Posts').icon(MdPhotoFilter),
         S.listItem()
           .title('Bulk Post Actions')
           .icon(MdRotate90DegreesCcw)
@@ -32,7 +30,9 @@ export default S.listItem()
             S.documentList()
               .title('Authors')
               .filter(`_type == 'person' && isAuthor`)
-              .canHandleIntent(S.documentTypeList('person').getCanHandleIntent())
+              .canHandleIntent(
+                S.documentTypeList('person').getCanHandleIntent()
+              )
           ),
         S.documentTypeListItem('comment')
           .title('Comments')
@@ -47,6 +47,6 @@ export default S.listItem()
             S.document()
               .schemaType('siteSettings')
               .documentId('blogSiteSettings')
-          )
+          ),
       ])
-  )
+  );

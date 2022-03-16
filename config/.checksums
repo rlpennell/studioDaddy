@@ -9,5 +9,7 @@
   "sanity-plugin-seo-tools": "564f33b8f2360b079d7c71dac71fb0e4efbad16ec97f1042b9cabc58c7da8533",
   "seo-tools": "564f33b8f2360b079d7c71dac71fb0e4efbad16ec97f1042b9cabc58c7da8533",
   "sanity-plugin-mapbox-input": "57ae3a403ce6a070b31ec6fa1f3c8339cafa66661eaddba1d4d5ee3cc2197ec2",
-  "mapbox-input": "57ae3a403ce6a070b31ec6fa1f3c8339cafa66661eaddba1d4d5ee3cc2197ec2"
+  "mapbox-input": "57ae3a403ce6a070b31ec6fa1f3c8339cafa66661eaddba1d4d5ee3cc2197ec2",
+  "@sanity/vision": "da5b6ed712703ecd04bf4df560570c668aa95252c6bc1c41d6df1bda9b8b8f60",
+  "@sanity/language-filter": "c06bac93a64adba368cd76bea4195a097f4c6145330da337377f43c2e3ee18c2"
 }

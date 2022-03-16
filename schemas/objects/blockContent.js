@@ -5,7 +5,6 @@ const highlightRender = props => (
   <span style={{ backgroundColor: 'cyan' }}>{props.children}</span>
 )
 
-
 export default {
   title: "Block Content",
   name: "blockContent",
@@ -87,6 +86,6 @@ export default {
     // primitive types such as 'string' and 'number' in the same array
     // as a block type.
     { type: 'figure'},
-    { type: 'code' }
-  ],
+    { type: 'code' },
+  ]
 }

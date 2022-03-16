@@ -1,4 +1,4 @@
-import { MdOutlinePortrait } from 'react-icons/md'
+import { MdOutlinePortrait } from 'react-icons/md';
 
 export default {
   name: 'person',
@@ -6,7 +6,7 @@ export default {
   icon: MdOutlinePortrait,
   type: 'document',
   preview: {
-    select: {title: 'name', media: 'image'},
+    select: { title: 'name', media: 'image' },
   },
   fields: [
     {
@@ -26,23 +26,23 @@ export default {
     {
       name: 'image',
       title: 'Image',
-      type: 'figure'
+      type: 'figure',
     },
     {
       name: 'bio',
       title: 'Bio',
-      type: 'simpleBlockContent'
+      type: 'simpleBlockContent',
     },
     {
       name: 'contact',
       title: 'Contact Info',
-      type: 'contact'
+      type: 'contact',
     },
     {
       name: 'isAuthor',
       type: 'boolean',
       initialValue: true,
-      hidden: true
-    }
+      hidden: true,
+    },
   ],
-}
+};
