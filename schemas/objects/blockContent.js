@@ -1,61 +1,67 @@
 import React from 'react';
-import { MdPhotoFilter, MdOutlineBorderColor } from 'react-icons/md'
+import { MdPhotoFilter, MdOutlineBorderColor } from 'react-icons/md';
 
-const highlightRender = props => (
+const highlightRender = (props) => (
   <span style={{ backgroundColor: 'cyan' }}>{props.children}</span>
-)
+);
+
+const H3Style = (props) => (
+  <span style={{ backgroundColor: 'cyan', fontSize: '1rem' }}>
+    {props.children}
+  </span>
+);
 
 export default {
-  title: "Block Content",
-  name: "blockContent",
-  type: "array",
+  title: 'Block Content',
+  name: 'blockContent',
+  type: 'array',
   of: [
     {
-      title: "Block",
-      type: "block",
+      title: 'Block',
+      type: 'block',
       // Styles let you set what your user can mark up blocks with. These
       // correspond with HTML tags, but you can set any title or value
       // you want and decide how you want to deal with it where you want to
       // use your content.
       styles: [
-        { title: "Normal", value: "normal" },
-        { title: "H1", value: "h1" },
-        { title: "H2", value: "h2" },
-        { title: "H3", value: "h3" },
-        { title: "H4", value: "h4" },
-        { title: "Quote", value: "blockquote" },
+        { title: 'Normal', value: 'normal' },
+        { title: 'H1', value: 'h1' },
+        { title: 'H2', value: 'h2' },
+        { title: 'H3', value: 'h3', blockEditor: { render: H3Style } },
+        { title: 'H4', value: 'h4' },
+        { title: 'Quote', value: 'blockquote' },
       ],
       lists: [
-        { title: "Bullet", value: "bullet" },
-        { title: "Number", value: "number" }
+        { title: 'Bullet', value: 'bullet' },
+        { title: 'Number', value: 'number' },
       ],
       // Marks let you mark up inline text in the block editor.
       marks: {
         // Decorators usually describe a single property – e.g. a typographic
         // preference or highlighting by editors.
         decorators: [
-          { title: "Strong", value: "strong" },
-          { title: "Emphasis", value: "em" },
+          { title: 'Strong', value: 'strong' },
+          { title: 'Emphasis', value: 'em' },
           {
             title: 'Highlight',
             value: 'highlight',
             blockEditor: {
               icon: MdOutlineBorderColor,
-              render: highlightRender
-            }
-          }
+              render: highlightRender,
+            },
+          },
         ],
         // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [
           {
-            title: "URL",
-            name: "link",
-            type: "object",
+            title: 'URL',
+            name: 'link',
+            type: 'object',
             fields: [
               {
-                title: "URL",
-                name: "href",
-                type: "url",
+                title: 'URL',
+                name: 'href',
+                type: 'url',
               },
             ],
           },
@@ -64,7 +70,7 @@ export default {
             type: 'object',
             title: 'Internal link',
             blockEditor: {
-              icon: MdPhotoFilter
+              icon: MdPhotoFilter,
             },
             fields: [
               {
@@ -73,19 +79,19 @@ export default {
                 to: [
                   { type: 'post' },
                   { type: 'project' },
-                  { type: 'category' }
+                  { type: 'category' },
                   // other types you may want to link to
-                ]
-              }
-            ]
-          }
+                ],
+              },
+            ],
+          },
         ],
-      }
+      },
     },
     // You can add additional types here. Note that you can't use
     // primitive types such as 'string' and 'number' in the same array
     // as a block type.
-    { type: 'figure'},
+    { type: 'figure' },
     { type: 'code' },
-  ]
-}
+  ],
+};

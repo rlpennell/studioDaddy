@@ -6,6 +6,9 @@ import SeoPane from 'sanity-plugin-seo-pane';
 import movieStructure from './movieStructure';
 import ecommerceStructure from './ecommerceStructure';
 import resolveProductionUrl from '../resolveProductionUrl';
+import { studioClient } from '../utils/studioClient';
+
+const dataset = studioClient.config().dataset;
 
 import {
   MdCode,
@@ -65,13 +68,5 @@ export default () =>
                 (listItem) => !singleEdits.includes(listItem.getId())
               ),
             ])
-        ),
-      S.listItem()
-        .title('Types')
-        .icon(MdGroupWork)
-        .child(
-          S.documentList()
-            .title('Types')
-            .filter('_type in ["post", "category", "movie"]')
         ),
     ]);

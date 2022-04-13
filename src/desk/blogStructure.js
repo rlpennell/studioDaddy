@@ -1,6 +1,7 @@
 import S from '@sanity/desk-tool/structure-builder';
 import { createSuperPane } from 'sanity-super-pane';
 import categories from './categories';
+import { studioClient } from '../utils/studioClient';
 
 import {
   MdLibraryBooks,
