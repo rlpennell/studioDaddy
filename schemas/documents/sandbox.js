@@ -26,23 +26,19 @@ export default {
       },
     },
     {
-      type: 'array',
-      name: 'modules',
-      of: [
+      name: 'team',
+      title: 'Team',
+      type: 'object',
+      fields: [
         {
-          type: 'object',
-          name: 'intro',
-          title: 'Intro',
-          fields: [
-            { type: 'boolean', name: 'cta_button', title: 'CTA button' },
+          name: 'person',
+          title: 'Person',
+          type: 'array',
+          of: [
             {
-              type: 'string',
-              name: 'button_label',
-              title: 'Button label',
-              hidden: ({ parent }) => {
-                console.log(parent);
-                return false;
-              },
+              type: 'reference',
+              to: [{ type: 'person' }],
+              title: 'Member',
             },
           ],
         },

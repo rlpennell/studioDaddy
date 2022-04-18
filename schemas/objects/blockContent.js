@@ -5,12 +5,6 @@ const highlightRender = (props) => (
   <span style={{ backgroundColor: 'cyan' }}>{props.children}</span>
 );
 
-const H3Style = (props) => (
-  <span style={{ backgroundColor: 'cyan', fontSize: '1rem' }}>
-    {props.children}
-  </span>
-);
-
 export default {
   title: 'Block Content',
   name: 'blockContent',
@@ -27,7 +21,7 @@ export default {
         { title: 'Normal', value: 'normal' },
         { title: 'H1', value: 'h1' },
         { title: 'H2', value: 'h2' },
-        { title: 'H3', value: 'h3', blockEditor: { render: H3Style } },
+        { title: 'H3', value: 'h3' },
         { title: 'H4', value: 'h4' },
         { title: 'Quote', value: 'blockquote' },
       ],

@@ -52,27 +52,27 @@
     },
     {
       "name": "part:@sanity/desk-tool/structure",
-      "path": "./src/desk/deskStructure.js"
+      "path": "./lib/desk/deskStructure.js"
     },
     {
       "name": "part:@sanity/base/new-document-structure",
-      "path": "./src/newDocumentStructure.js"
+      "path": "./lib/newDocumentStructure.js"
     },
     {
       "implements": "part:@sanity/base/document-actions/resolver",
-      "path": "./src/resolveDocumentActions.js"
+      "path": "./lib/resolveDocumentActions.js"
     },
     {
       "implements": "part:@sanity/form-builder/input/image/asset-sources",
-      "path": "./src/assetSources.js"
+      "path": "./lib/assetSources.js"
     },
     {
       "implements": "part:@sanity/production-preview/resolve-production-url",
-      "path": "./src/resolveProductionUrl.js"
+      "path": "./lib/resolveProductionUrl.js"
     },
     {
       "implements": "part:@sanity/base/theme/variables/override-style",
-      "path": "./src/variableOverrides.css"
+      "path": "./lib/variableOverrides.css"
     }
   ]
 }

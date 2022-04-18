@@ -1,6 +1,4 @@
-import { MdPhotoFilter } from 'react-icons/md'
-import { studioClient } from '../../src/utils/studioClient'
-import { v4 as uuid } from 'uuid'
+import { MdPhotoFilter } from 'react-icons/md';
 
 export default {
   name: 'post',
@@ -16,15 +14,15 @@ export default {
       return {
         title,
         subtitle,
-        media: MdPhotoFilter
-      }
-    }
+        media: MdPhotoFilter,
+      };
+    },
   },
   fields: [
     {
       name: 'title',
       title: 'Title',
-      type: 'string'
+      type: 'string',
     },
     {
       name: 'slug',
@@ -33,14 +31,14 @@ export default {
       options: {
         source: 'title',
         maxLength: 96,
-        isUnique: () => true
-      }
+        isUnique: () => true,
+      },
     },
     {
       name: 'author',
       title: 'Author',
       type: 'reference',
-      to: {type: 'person'}
+      to: { type: 'person' },
     },
     {
       name: 'mainImage',
@@ -51,41 +49,34 @@ export default {
       name: 'category',
       title: 'Categories',
       type: 'array',
-      of: [{type: 'categoryGroup'}]
+      of: [{ type: 'categoryGroup' }],
     },
     {
       name: 'publishedAt',
       title: 'Published at',
-      type: 'datetime'
+      type: 'datetime',
     },
     {
       name: 'body',
       title: 'Body',
-      type: 'blockContent'
-    }
+      type: 'blockContent',
+    },
   ],
   orderings: [
     {
       title: 'Author',
       name: 'author',
-      by: [
-        {field: 'author.name', direction: 'asc'}
-      ]
+      by: [{ field: 'author.name', direction: 'asc' }],
     },
     {
       title: 'Date, Asc',
       name: 'dateAsc',
-      by: [
-        {field: 'publishedAt', direction: 'asc'}
-      ]
+      by: [{ field: 'publishedAt', direction: 'asc' }],
     },
     {
       title: 'Date, Desc',
       name: 'dateDesc',
-      by: [
-        {field: 'publishedAt', direction: 'desc'}
-      ]
+      by: [{ field: 'publishedAt', direction: 'desc' }],
     },
-  ]
-
-}
+  ],
+};

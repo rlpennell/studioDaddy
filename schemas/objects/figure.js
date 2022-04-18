@@ -1,5 +1,3 @@
-import PreviewComponent from "../components/PreviewComponent"
-
 export default {
   name: 'figure',
   title: 'Image',
@@ -10,19 +8,19 @@ export default {
       title: 'Alt Text',
       type: 'string',
       options: {
-        isHighlighted: true
-      }
+        isHighlighted: true,
+      },
     },
     {
       name: 'caption',
       title: 'Caption',
       type: 'string',
       options: {
-        isHighlighted: true
-      }
-    }
+        isHighlighted: true,
+      },
+    },
   ],
   options: {
-    hotspot: true
-  }
-}
+    hotspot: true,
+  },
+};

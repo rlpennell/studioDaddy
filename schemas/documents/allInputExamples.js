@@ -3,10 +3,9 @@ import UrlDownload from '../components/UrlDownload';
 import AsyncSelect from '../components/AsyncSelect';
 import CreatedAt from '../components/CreatedAt';
 import UrlWithButton from '../components/UrlWithButton';
-import { catHandler } from '../../src/utils/catHandler';
+import { catHandler } from '../../lib/utils/catHandler';
 import ReferenceSelect from '../components/ReferenceSelect';
 import Wireframe from '../components/Wireframe';
-import StringWithLimits from '../components/StringWithLimits';
 
 export default {
   name: 'allInputExamples',

@@ -1,29 +1,28 @@
-import React, { useEffect, useState } from 'react'
-import { studioClient } from '../../src/utils/studioClient'
+import React, { useEffect, useState } from 'react';
+import { studioClient } from '../../lib/utils/studioClient';
 
-const UrlDownload = props => {
-  const [link, setLink] = useState()
+const UrlDownload = (props) => {
+  const [link, setLink] = useState();
 
   useEffect(() => {
     const getLink = async () => {
-      const assetLink = await studioClient.fetch(`*[_id == $id][0].url`, { id: props.parent.file.asset._ref})
-      setLink(assetLink)
-    }
+      const assetLink = await studioClient.fetch(`*[_id == $id][0].url`, {
+        id: props.parent.file.asset._ref,
+      });
+      setLink(assetLink);
+    };
 
-    getLink()
-  }, [])
+    getLink();
+  }, []);
 
   return (
     <>
-    <p>Download File</p>
-    <a 
-      href={`${link}`} 
-      target="_blank"
-    >
-      {link}
-    </a>
+      <p>Download File</p>
+      <a href={`${link}`} target='_blank'>
+        {link}
+      </a>
     </>
-  )
-}
+  );
+};
 
-export default UrlDownload
+export default UrlDownload;
