@@ -1,4 +1,4 @@
-import { MdOutlinePhotoLibrary } from 'react-icons/md'
+import { MdOutlinePhotoLibrary } from 'react-icons/md';
 
 export default {
   name: 'category',
@@ -14,19 +14,19 @@ export default {
     {
       name: 'title',
       title: 'Title',
-      type: 'string'
+      type: 'string',
     },
     {
       name: 'description',
       title: 'Description',
-      type: 'text'
+      type: 'text',
     },
     {
       name: 'slug',
       type: 'slug',
       options: {
-        source: 'title'
-      }
-    }
-  ]
-}
+        source: 'title',
+      },
+    },
+  ],
+};

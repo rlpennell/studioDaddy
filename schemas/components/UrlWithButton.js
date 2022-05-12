@@ -20,12 +20,10 @@ const UrlWithButton = React.forwardRef((props, ref) => {
     document,
   } = props;
 
-  console.log(onFocus);
-
   // Creates a change handler for patching data
   const handleChange = React.useCallback(
     // useCallback will help with performance
-    (event) => {
+    event => {
       const inputValue = event.currentTarget.value; // get current value
       // if the value exists, set the data, if not, unset the data
       onChange(PatchEvent.from(inputValue ? set(inputValue) : unset()));
@@ -35,7 +33,7 @@ const UrlWithButton = React.forwardRef((props, ref) => {
 
   //Fetches the URL specfied then uses the JS client to write to the current document
   const handleClick = async () => {
-    const res = await fetch(value).then((res) => res.json());
+    const res = await fetch(value).then(res => res.json());
     studioClient
       .patch(document._id)
       .set({

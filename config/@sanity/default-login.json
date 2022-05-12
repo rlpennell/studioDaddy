@@ -1,7 +1,13 @@
 {
   "providers": {
-    "mode": "append",
+    "mode": "replace",
     "redirectOnSingle": false,
-    "entries": []
+    "entries": [
+      {
+        "name": "google",
+        "title": "Google",
+        "url": "https://api.sanity.io/v1/auth/login/google"
+      }
+    ]
   }
 }

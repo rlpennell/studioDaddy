@@ -16,8 +16,6 @@ const CreatedAt = React.forwardRef((props) => {
     document,
   } = props;
 
-  console.log(document);
-
   return (
     <Card padding={[3, 3, 4]} radius={2} shadow={1} tone='positive'>
       <Text align='center' size={[2, 2, 3]}>

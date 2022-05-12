@@ -22,5 +22,12 @@ export default {
   ],
   options: {
     hotspot: true,
+    accept: '.png',
+  },
+  preview: {
+    select: {
+      imageUrl: 'asset.url',
+      title: 'caption',
+    },
   },
 };

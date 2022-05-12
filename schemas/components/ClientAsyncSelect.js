@@ -24,7 +24,7 @@ const ClientAsyncSelect = React.forwardRef((props, ref) => {
   // Creates a change handler for patching data
   const handleChange = React.useCallback(
     // useCallback will help with performance
-    (event) => {
+    event => {
       const inputValue = event.currentTarget.value; // get current value
       // if the value exists, set the data, if not, unset the data
       onChange(PatchEvent.from(inputValue ? set(inputValue) : unset()));
@@ -36,7 +36,7 @@ const ClientAsyncSelect = React.forwardRef((props, ref) => {
 
   useEffect(() => {
     const getSections = async () => {
-      const items = await studioClient
+      await studioClient
         .fetch(`*[_id == $id][0].sections[].title`, {
           id: parent.page._ref ? parent.page._ref : '',
         })
@@ -71,7 +71,7 @@ const ClientAsyncSelect = React.forwardRef((props, ref) => {
           >
             <option value={'---'}>---</option>
             {listItems &&
-              listItems.map((item) => (
+              listItems.map(item => (
                 <option key={item} value={item}>
                   {item}
                 </option>

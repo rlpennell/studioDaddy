@@ -1,4 +1,6 @@
 import React from 'react';
+import Link from '../components/Link';
+import { studioClient } from '../../lib/utils/studioClient';
 
 export default {
   name: 'sandbox',
@@ -17,32 +19,39 @@ export default {
       hidden: true,
     },
     {
-      title: 'Director',
-      name: 'director',
-      type: 'reference',
-      to: [{ type: 'person' }],
-      options: {
-        disableNew: true,
-      },
+      name: 'images',
+      type: 'array',
+      of: [{ type: 'figure' }],
     },
     {
-      name: 'team',
-      title: 'Team',
-      type: 'object',
-      fields: [
-        {
-          name: 'person',
-          title: 'Person',
-          type: 'array',
-          of: [
-            {
-              type: 'reference',
-              to: [{ type: 'person' }],
-              title: 'Member',
-            },
-          ],
-        },
-      ],
+      name: 'form_get_form_url',
+      description: (
+        <>
+          Some text <a href='test'>some link</a>
+        </>
+      ),
+      type: 'string',
+      title: 'GET Form Elements URL',
+    },
+    {
+      name: 'actor',
+      title: 'Actor',
+      type: 'reference',
+      to: [{ type: 'person' }],
+    },
+    {
+      name: 'movie',
+      title: 'Movie',
+      type: 'reference',
+      to: [{ type: 'movie' }],
+      options: {
+        filter: ({ document }) => ({
+          filter: '$id in castMembers[].person._ref',
+          params: {
+            id: document.actor._ref,
+          },
+        }),
+      },
     },
   ],
 };

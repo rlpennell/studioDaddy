@@ -36,13 +36,13 @@
     "media",
     "seo-pane",
     "asset-source-unsplash",
-    "@sanity/dashboard"
+    "@sanity/dashboard",
+    "@sanity/google-maps-input",
+    "@sanity/scheduled-publishing"
   ],
   "env": {
     "development": {
-      "plugins": [
-        "@sanity/vision"
-      ]
+      "plugins": ["@sanity/vision"]
     }
   },
   "parts": [

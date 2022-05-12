@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { studioClient } from '../../lib/utils/studioClient';
 
-const UrlDownload = (props) => {
+const UrlDownload = props => {
   const [link, setLink] = useState();
 
   useEffect(() => {
     const getLink = async () => {
-      const assetLink = await studioClient.fetch(`*[_id == $id][0].url`, {
-        id: props.parent.file.asset._ref,
-      });
-      setLink(assetLink);
+      await studioClient
+        .fetch(`*[_id == $id][0].url`, {
+          id: props.parent.file.asset._ref,
+        })
+        .then(setLink);
     };
 
     getLink();
@@ -17,9 +18,8 @@ const UrlDownload = (props) => {
 
   return (
     <>
-      <p>Download File</p>
       <a href={`${link}`} target='_blank'>
-        {link}
+        View File
       </a>
     </>
   );
